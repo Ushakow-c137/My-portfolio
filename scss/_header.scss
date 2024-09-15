@@ -1,0 +1,131 @@
+.header {
+
+  width: calc(100vw - 33rem);
+  margin-left: auto;
+  background-color: var(--indexBlue);
+
+  &__content {
+    margin-left: 8.5rem;
+    max-width: 1890px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 5rem;
+    
+  }
+
+  &__switch {
+    width: 6.5rem;
+    height: 3.5rem;
+    border-radius: 5rem;
+    background-color: #D9D9D9;
+    display: flex;
+    // flex: 0 0 auto;
+    margin-right: 114px;
+
+
+    & div {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      background-color: var(--black);
+    }
+  }
+
+}
+
+.subnav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  padding: 2rem 2.6rem 1.8rem 2.6rem;
+  border-radius: 0px 0px 1.2rem 1.2rem;
+  background-color: var(--lightBlue);
+  transition: all .2s linear;
+
+  li a:not(:last-of-type) {
+    margin-bottom: 1.6rem;
+  }
+
+  &__link {
+    display: block;
+    color: var(--white);
+    font-family: "Arial";
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+  }
+
+}
+//! ass ass ass ass ass waring! fisting ass!
+
+.nav {
+  
+
+  &__list {
+    display: flex;
+    
+  }
+
+  &__item {
+    transition: .2s color linear;
+    & .subnav__link {
+      transition: color .2s linear;
+      &:hover {
+        color: var(--black);
+      }
+    }
+
+    &:hover {
+      transition: all .2s linear;
+  
+      .subnav {
+        transition: all .2s linear;
+        color: var(--black);
+        top: 5rem;
+        opacity: 1;
+        visibility: visible;
+      }
+      
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    padding: 0 2.6rem;
+    font-size: 1.8rem;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    color: var(--white);
+    transition: all .2s linear;
+
+    &.has-subnav {
+      padding-right: 30px;
+      position: relative;
+
+      &:hover {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      &::after {
+        position: absolute;
+        right: 0;
+        transition: all .2s linear;
+        content: url(../images/logo/polygon.svg);
+      }
+    }
+
+    &:hover {
+      background-color: var(--lightBlue);
+    }
+
+  }
+}
+

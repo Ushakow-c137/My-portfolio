@@ -1,0 +1,315 @@
+@charset "UTF-8";
+:root {
+  --backgroundColor: #171717;
+  --indexBlue: #05296E;
+  --lightBlue: #1144AA;
+  --darkenBlue: #29467F;
+  --yellow: #FAFF00;
+  --yelloeHeader: #FECD09;
+  --sidebarColor: #0E0E0E;
+  --white: #fff;
+  --black: #000;
+  --sidebarWidth: 33rem;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat);
+}
+@font-face {
+  font-family: "Arial";
+  src: url(../fonts/Arial);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto);
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input, textarea, button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-weight: 400;
+  color: black;
+  background-color: var(--backgroundColor);
+  font-family: "Montserrat";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+/* Подключение шрифтов &display=swap&subject=syrillic-ext */
+/* &display=swap —- Улучшает показатели (контролит порядок загрузки шрифтов), запись в конце строки, подключающей шрифты */
+/* &subsect=syrillic-ext —— Для сайтов на кирилице */
+.header {
+  width: calc(100vw - 33rem);
+  margin-left: auto;
+  background-color: var(--indexBlue);
+}
+.header__content {
+  margin-left: 8.5rem;
+  max-width: 1890px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 5rem;
+}
+.header__switch {
+  width: 6.5rem;
+  height: 3.5rem;
+  border-radius: 5rem;
+  background-color: #D9D9D9;
+  display: flex;
+  margin-right: 114px;
+}
+.header__switch div {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: var(--black);
+}
+
+.subnav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  padding: 2rem 2.6rem 1.8rem 2.6rem;
+  border-radius: 0px 0px 1.2rem 1.2rem;
+  background-color: var(--lightBlue);
+  transition: all 0.2s linear;
+}
+.subnav li a:not(:last-of-type) {
+  margin-bottom: 1.6rem;
+}
+.subnav__link {
+  display: block;
+  color: var(--white);
+  font-family: "Arial";
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.nav__list {
+  display: flex;
+}
+.nav__item {
+  transition: 0.2s color linear;
+}
+.nav__item .subnav__link {
+  transition: color 0.2s linear;
+}
+.nav__item .subnav__link:hover {
+  color: var(--black);
+}
+.nav__item:hover {
+  transition: all 0.2s linear;
+}
+.nav__item:hover .subnav {
+  transition: all 0.2s linear;
+  color: var(--black);
+  top: 5rem;
+  opacity: 1;
+  visibility: visible;
+}
+.nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  padding: 0 2.6rem;
+  font-size: 1.8rem;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  color: var(--white);
+  transition: all 0.2s linear;
+}
+.nav__link.has-subnav {
+  padding-right: 30px;
+  position: relative;
+}
+.nav__link.has-subnav:hover::after {
+  transform: rotate(180deg);
+}
+.nav__link.has-subnav::after {
+  position: absolute;
+  right: 0;
+  transition: all 0.2s linear;
+  content: url(../images/logo/polygon.svg);
+}
+.nav__link:hover {
+  background-color: var(--lightBlue);
+}
+
+.aside {
+  width: var(--sidebarWidth);
+  min-height: 100vh;
+  background-color: var(--sidebarColor);
+  position: fixed;
+  top: 0;
+}
+.aside__content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aside__text {
+  position: relative;
+  margin-top: 5rem;
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 6.5rem 1.5rem 4.5rem 1.5rem;
+  padding: 0px 0.5rem;
+}
+.aside__text::after {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #05296E;
+}
+.aside__text::before {
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #05296E;
+}
+.aside__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.aside__link {
+  transition: all 0.2s linear;
+}
+.aside__link:not(:last-of-type) {
+  margin-right: 3.2rem;
+}
+.aside__link:hover {
+  transform: rotate(360deg);
+}
+
+.aside-head {
+  width: auto;
+  height: 23rem;
+  position: relative;
+}
+.aside-head__bg-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.aside-head__vector {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.aside-head__logo {
+  width: 12.5rem;
+  height: 12.5rem;
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--lightBlue);
+  overflow: hidden;
+  border: 1px solid #3137C9;
+}
+.aside-head__title {
+  position: absolute;
+  top: 15rem;
+  display: inline;
+  padding: 1.2rem 2.4rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-right: auto;
+  font-weight: 500;
+  color: #ffffff;
+}
+.aside-head__subtitle {
+  display: inline;
+  position: absolute;
+  bottom: -1.8rem;
+  right: 0;
+  padding: 1.2rem 0.5rem;
+  color: var(--white);
+  background-color: rgba(217, 217, 217, 0.3);
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  background-color: cadetblue;
+}
+.main__content {
+  width: 100%;
+  height: auto;
+}

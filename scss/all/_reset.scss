@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat);
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url(../fonts/Arial);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto);
+}
+
 *,
 *::before,
 *::after {
@@ -38,8 +53,10 @@ html,
 body {
 	height: 100%;
 	line-height: 1;
+  font-weight: 400;
 	color: black;
-	background-color: #171717;
+	background-color: var(--backgroundColor);
+  font-family: "Montserrat";
 }
 
 html {font-size: 62.5%;}
