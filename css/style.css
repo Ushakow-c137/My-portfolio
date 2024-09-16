@@ -111,7 +111,7 @@ body {
 .header {
   width: calc(100vw - 33rem);
   background-color: var(--indexBlue);
-  z-index: 90;
+  z-index: 0;
   position: fixed;
   right: 0;
 }
@@ -379,18 +379,29 @@ body {
      object-fit: cover;
 }
 
-.slidebar {
+.slider {
+  position: relative;
   height: 48.8rem;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 6rem 4.8rem;
 }
-.slidebar__container {
+.slider h2 {
+  position: absolute;
+  top: 27px;
+  left: 25%;
+  transform: translateX(-25%);
+  color: var(--lightBlue);
+  font-size: 2rem;
+}
+.slider__container {
   max-width: 100%;
   height: auto;
 }
 
-.slider {
+.slider__container {
   max-width: 1460px;
+  display: flex;
+  justify-content: center;
 }
 .slider__wrapper {
   display: flex;
@@ -398,23 +409,66 @@ body {
 }
 
 .slide {
-  max-width: 66.4rem;
   position: relative;
+  max-width: 644px;
+  width: 100%;
+  max-height: 370px;
   border-radius: 2rem;
   overflow: hidden;
-}
-.description {
-  position: relative;
-}
-.description__inner {
-  position: absolute;
-  bottom: 0;
   display: flex;
   align-items: center;
-  height: 42px;
-  background-color: rgba(17, 68, 170, 0.5);
-  width: 100%;
+  justify-content: center;
+  margin: 0 10px;
 }
-.description img {
-  max-width: 35px;
+.slide__description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(17, 68, 170, 0.5);
+  height: 4.2rem;
+}
+.slide__description p:nth-child(1) {
+  font-size: 1.4rem;
+  color: #BFB8B8;
+  margin-left: 2rem;
+  margin-right: 1.4rem;
+  position: relative;
+}
+.slide__description p:nth-child(1)::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: -1.4rem;
+  width: 2px;
+  height: 3.2rem;
+  background-color: var(--lightBlue);
+}
+.slide__description p:nth-child(3) {
+  font-size: 1.4rem;
+  color: var(--white);
+  font-family: "Montserrat";
+  margin-left: 1.4rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+.slide__description p:nth-child(3)::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: -1.4rem;
+  width: 2px;
+  height: 3.2rem;
+  background-color: var(--lightBlue);
+}
+.slide__description img {
+  max-width: 3rem;
+  position: relative;
+  margin: 0 1.4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
