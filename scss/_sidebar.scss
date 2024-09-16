@@ -1,10 +1,11 @@
 .aside {
-
+    // margin-top: 5rem;
 		width: var(--sidebarWidth);
     min-height: 100vh;
     background-color: var(--sidebarColor);
     position: fixed;
     top: 0;
+    box-shadow: 6px 0 4px rgba(0, 0, 0, 0.5);
 
 		&__content {
       width: 100%;

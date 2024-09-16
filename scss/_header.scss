@@ -1,8 +1,11 @@
 .header {
 
   width: calc(100vw - 33rem);
-  margin-left: auto;
+  // margin-left: auto;
   background-color: var(--indexBlue);
+  z-index: 90;
+  position: fixed;
+  right: 0;
 
   &__content {
     margin-left: 8.5rem;

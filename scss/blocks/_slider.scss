@@ -1,0 +1,54 @@
+.slidebar {
+  height: 48.8rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 6rem 4.8rem;
+
+  &__container {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+.slider {
+  max-width: 1460px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.slide {
+
+  max-width: 66.4rem;
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+
+  &__description {
+
+  }
+
+}
+
+.description {
+
+  position: relative;
+
+  &__inner {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    height: 42px;
+    background-color: rgba(17, 68, 170, 0.5);
+    width: 100%;
+  }
+  
+
+  img {
+    max-width: 35px;
+  }
+}

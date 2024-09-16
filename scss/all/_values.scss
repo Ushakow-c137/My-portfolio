@@ -11,3 +11,16 @@
   --sidebarWidth: 33rem;
 }
 
+.section {
+  max-width: 1460px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 1.5rem;
+  box-shadow: 
+  -6px -6px 10px rgba(0, 0, 0, 0.25),
+  6px 6px 10px rgba(0, 0, 0, 0.25);
+
+  &:not(:last-of-type) {
+    margin-bottom: 6.5rem;
+  }
+}

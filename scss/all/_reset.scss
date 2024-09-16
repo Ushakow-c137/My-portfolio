@@ -22,12 +22,20 @@ border: 0;
 box-sizing: border-box;
 }
 
-a {text-decoration: none; color: inherit;}
+a {
+  text-decoration: none; 
+  color: inherit; 
+  display: flex;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
 
 ul, ol, li {list-style: none;}
 
 img {
-	max-width: 100%;
+	// max-width: 100%;
 	height: auto;
 	display: block;
 }
