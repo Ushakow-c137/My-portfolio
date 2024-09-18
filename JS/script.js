@@ -1,10 +1,11 @@
 "use strict";
 
-const slider = new Swiper(".slider__container", {
+const slider = new Swiper(".slider", {
   loop: true,
 
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 
   navigation: {
@@ -21,7 +22,7 @@ const slider = new Swiper(".slider__container", {
   },
 
   slidesPerView: 2,
-  spaceBetween: 40,
+  spaceBetween: 76,
 
 });
 
