@@ -18,9 +18,13 @@
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 1.5rem;
   box-shadow: -6px -6px 10px rgba(0, 0, 0, 0.25), 6px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s linear;
 }
 .section:not(:last-of-type) {
   margin-bottom: 6.5rem;
+}
+.section:hover {
+  background-color: rgba(9, 9, 10, 0.5);
 }
 
 @font-face {
@@ -126,18 +130,27 @@ body {
   min-height: 5rem;
 }
 .header__switch {
-  width: 6.5rem;
-  height: 3.5rem;
+  position: relative;
+  width: 5rem;
+  height: 3rem;
   border-radius: 5rem;
   background-color: #D9D9D9;
   display: flex;
   margin-right: 114px;
 }
 .header__switch div {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   background-color: var(--black);
+}
+.header__switch::before {
+  position: absolute;
+  content: "Night";
+  right: 7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--white);
 }
 
 .subnav {
@@ -380,16 +393,22 @@ body {
      object-fit: cover;
 }
 
-.slider {
-  padding: 6rem 0rem;
+.sld {
+  position: relative;
 }
-.slider__container {
-  max-width: 100%;
-  height: auto;
+.sld h2 {
+  position: absolute;
+  top: 27px;
+  left: 20%;
+  transform: translateX(-25%);
+  color: var(--lightBlue);
+  font-size: 2rem;
+  font-family: "Arial";
 }
 
 .slider {
   position: relative;
+  padding: 6rem 0rem;
   max-width: clamp(85.8rem, -50.43rem + 97.31vw, 136.4rem);
   display: flex;
   align-items: center;
@@ -411,6 +430,13 @@ body {
   justify-content: center;
   border-radius: 2rem;
 }
+.slide:hover {
+  transition: all 5s linear;
+}
+.slide:hover img {
+  transition: all 8s linear;
+  transform: scale(1.1);
+}
 .slide img {
   width: 100%;
 }
@@ -425,7 +451,7 @@ body {
   height: 4.2rem;
 }
 .slide__description p:nth-child(1) {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #BFB8B8;
   margin-left: 2rem;
   margin-right: 1.4rem;
@@ -442,9 +468,9 @@ body {
   background-color: var(--lightBlue);
 }
 .slide__description p:nth-child(3) {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: var(--white);
-  font-family: "Montserrat";
+  font-family: "Arial";
   margin-left: 1.4rem;
   letter-spacing: 1px;
   position: relative;
@@ -476,11 +502,16 @@ body {
   position: absolute;
   top: 3.8rem;
   border-radius: 0.5rem;
+  transition: background-color, 0.2s linear;
 }
 .swiper-button-next::after, .swiper-button-next::before,
 .swiper-button-prev::after,
 .swiper-button-prev::before {
   content: "";
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #1553cf;
 }
 
 .swiper-button-next {
