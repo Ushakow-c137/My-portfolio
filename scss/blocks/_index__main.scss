@@ -5,6 +5,9 @@
   min-height: calc(100vh - 5rem);
   background-color: var(--backgroundColor);
   padding: 6.5rem;
+  @media (max-width: 1499px) {
+    padding: 6.5rem 2rem;
+  }
 
   &__content {
     width: 100%;
@@ -17,3 +20,8 @@
 
 }
 
+@media (max-width: 1300px) {
+  .main {
+    max-width: 100%;
+  }
+}
