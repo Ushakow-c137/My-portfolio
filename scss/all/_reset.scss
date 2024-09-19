@@ -67,6 +67,10 @@ body {
   font-family: "Montserrat";
 }
 
+body * {
+  transition: all 0.2s linear;
+}
+
 html {font-size: 62.5%;}
 body {
   font-size: 1.6rem;

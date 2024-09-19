@@ -12,8 +12,53 @@
 }
 
 .light {
+
   --backgroundColor: #D4DCF8;
-  --sidebarColor: #6B8FD4;
+  --sidebarColor: #1648a3;
+  .header__switch {
+    justify-content: flex-end;
+    div {
+      background-color: #FECD09;
+    }
+
+    &::before {
+      content: 'Day';
+      color: #FECD09;
+    }
+  }
+
+  @media (max-width: 650px) {
+
+    .header__switch {
+      div {
+        &::before {
+          content: '';
+        }
+        &::after {
+          content: 'Day';
+        }
+      }
+    }
+  }
+  
+
+  .aside__text {
+    &::after {
+      background-color: #000000;
+    }
+    &::before {
+      background-color: #000000;
+    }
+  }
+
+  .offer__title {
+    color: #050f94;
+    // font-weight: 600;
+  }
+
+  .offer__subtitle {
+    color: #000;
+  }
 }
 
 .section {

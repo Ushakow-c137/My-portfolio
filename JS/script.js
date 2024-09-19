@@ -64,3 +64,11 @@ styleToggle.addEventListener('click', () => {
 if (styleMode === 'dark') {
   enableDarkStyle();
 }
+
+
+// -------------- burger king
+
+const burger = document.querySelector('.header__burger');
+burger.addEventListener('click', function () {
+  burger.classList.toggle('_active');
+});

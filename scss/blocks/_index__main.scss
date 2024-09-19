@@ -9,6 +9,10 @@
     padding: 6.5rem 2rem;
   }
 
+  @media (max-width: 650px) {
+    padding: 2rem 1rem;
+  }
+
   &__content {
     width: 100%;
     height: auto;
