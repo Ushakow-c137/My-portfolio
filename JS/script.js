@@ -1,15 +1,27 @@
 "use strict";
 
-const pade = document.body
-const width = pade.clientWidth;
-let clientWidth = function () {
+const page = document.body;
+const width = page.clientWidth;
+
+function clientWidth() {
   if (width >= 1500) {
     return 76;
   } else {
-    return 20
+    return 20;
   }
-};
+}
 
+function slidesPerView() {
+  const width = page.clientWidth;
+
+  if (width < 651) {
+    return 4;
+  } else {
+    return 2;
+  }
+}
+
+console.log(width);
 
 const slider = new Swiper(".slider", {
   loop: true,
@@ -28,14 +40,20 @@ const slider = new Swiper(".slider", {
     el: '.swiper-scrollbar',
   },
 
-  mousewheel: {
-
-  },
+  mousewheel: {},
 
   slidesPerView: 2,
+
   spaceBetween: clientWidth(),
 
+  autoHeight: false,
+  // slidesPerColumn: 2,
+
 });
+
+
+
+// -------------------------- цветовая тема ------------------
 
 let styleMode = localStorage.getItem("styleMode");
 
@@ -66,7 +84,7 @@ if (styleMode === 'dark') {
 }
 
 
-// -------------- burger king
+// -------------- burger king -------------------
 
 const burger = document.querySelector('.header__burger');
 burger.addEventListener('click', function () {
