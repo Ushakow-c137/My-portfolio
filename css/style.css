@@ -651,6 +651,21 @@ body {
   align-items: center;
   position: relative;
 }
+@media (max-width: 650px) {
+  .slider__wrapper {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(4, 51.8%);
+    height: auto;
+    align-self: center;
+    align-items: center;
+    place-items: center;
+    gap: 20px 0px;
+  }
+}
+.slider .swiper__wrapper {
+  place-items: center;
+}
 @media (max-width: 1300px) {
   .slider {
     max-width: 100%;
@@ -659,6 +674,11 @@ body {
 @media (max-width: 800px) {
   .slider {
     padding: 4rem 0rem 3rem;
+  }
+}
+@media (max-width: 649px) {
+  .slider {
+    background-color: #6876c3;
   }
 }
 

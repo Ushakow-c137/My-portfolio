@@ -37,7 +37,25 @@
     align-items: center;
     position: relative;
 
+    @media (max-width: 650px) {
+      display: grid;
 
+      //! ширина РЯДОВ нахуй
+      grid-template-rows: repeat(2, auto);
+
+      //! ШИРИНА КАЛОНОК БЛЯТЬ
+      grid-template-columns: repeat(4, 51.8%); 
+      height: auto;
+      align-self: center;
+      align-items: center;
+      place-items: center;
+      gap: 20px 0px;
+    }
+
+  }
+
+  .swiper__wrapper {
+    place-items: center;
   }
 
   @media (max-width: 1300px) {
@@ -46,6 +64,12 @@
 
   @media (max-width: 800px) {
     padding: 4rem 0rem 3rem;
+  }
+
+  @media (max-width: 649px) {
+
+    background-color: #6876c3;
+  
   }
 
 }
