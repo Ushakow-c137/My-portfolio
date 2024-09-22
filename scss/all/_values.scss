@@ -73,8 +73,15 @@
   &:not(:last-of-type) {
     margin-bottom: 6.5rem;
   }
+
   transition: all .3s linear;
   &:hover {
     background-color: rgba(9, 9, 10, 0.5);
   }
+}
+
+@media (max-width: 650px) {
+  #offer {
+    margin-bottom: 12rem;
+  } 
 }

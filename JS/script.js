@@ -1,55 +1,64 @@
-"use strict";
+"use strict"; 
 
-const page = document.body;
-const width = page.clientWidth;
+const page = document.body; 
+const width = page.clientWidth; 
 
-function clientWidth() {
-  if (width >= 1500) {
-    return 76;
-  } else {
-    return 20;
-  }
+function clientWidth() { 
+  if (width >= 1500) { 
+    return 76; 
+  } else { 
+    return 20; 
+  } 
 }
 
-function slidesPerView() {
-  const width = page.clientWidth;
+function slidesPerView() { 
+  const width = page.clientWidth; 
 
-  if (width < 651) {
-    return 4;
-  } else {
-    return 2;
-  }
-}
+  if (width < 651) { 
+    return 4; 
+  } else { 
+    return 2; 
+  } 
+} 
 
-console.log(width);
+console.log(width); 
 
-const slider = new Swiper(".slider", {
-  loop: true,
+const slider = new Swiper(".slider", { 
+  loop: true, 
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+  pagination: { 
+    el: '.swiper-pagination', 
+    clickable: true, 
+  }, 
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+  navigation: { 
+    nextEl: '.swiper-button-next', 
+    prevEl: '.swiper-button-prev', 
+  }, 
 
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+  scrollbar: { 
+    el: '.swiper-scrollbar', 
+  }, 
 
-  mousewheel: {},
+  mousewheel: {}, 
 
-  slidesPerView: 2,
+  slidesPerView: 2, 
 
-  spaceBetween: clientWidth(),
+  breakpoints: { 
+    650: { 
+      spaceBetween: clientWidth(), 
+      slidesPerView: slidesPerView(),
+    },
+    320: {
+      spaceBetween: 0,
+      slidesPerGroup: 1,
+    } 
+  }, 
 
-  autoHeight: false,
-  // slidesPerColumn: 2,
-
+  autoHeight: false, 
+  // slidesPerColumn: 2, 
 });
+
 
 
 
