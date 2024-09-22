@@ -3,7 +3,7 @@
   width: calc(100vw - 33rem);
   // margin-left: auto;
   background-color: var(--indexBlue);
-  z-index: 99;
+  z-index: 90;
   position: fixed;
   right: 0;
 
@@ -19,6 +19,7 @@
     align-items: center;
     justify-content: space-between;
     min-height: 5rem;
+    z-index: 50;
   }
 
   &__switch {
@@ -248,3 +249,38 @@
   }
 }
 
+
+
+
+// ---------- active menu --------------
+
+
+@media (max-width: 650px) {
+  .wrapper._active{
+    .nav {
+      background-color: rgba(14, 14, 14, 1);
+      display: flex; 
+      position: absolute;
+      top: 5rem;
+      width: calc(100vw);
+      padding-bottom: 10rem;
+      margin-top: 25rem;
+      transform: translateX(-1rem);
+      z-index: 99;
+  
+      &__list {
+        flex-direction: column;
+        margin-top: 10rem;
+      }
+  
+      &__item {
+  
+      }
+  
+      &__link {
+  
+      }
+    }
+    
+  }
+}

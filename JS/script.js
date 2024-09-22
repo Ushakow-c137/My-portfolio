@@ -96,6 +96,8 @@ if (styleMode === 'dark') {
 // -------------- burger king -------------------
 
 const burger = document.querySelector('.header__burger');
+const wrapper = document.querySelector('.wrapper');
 burger.addEventListener('click', function () {
   burger.classList.toggle('_active');
+  wrapper.classList.toggle('_active');
 });

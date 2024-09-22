@@ -47,7 +47,17 @@
 
         <section class="aside__head aside-head">
           <div class="aside-head__bg-img">
-            <img src="../images/images/default/aside-img.jpg" alt="">
+            <picture>
+              <source
+              media="(max-width: 650px)"
+              type="image/webp"
+              srcset="../images/images/webp/sidebar-650.webp">
+              <source
+              media="(max-width: 650px)"
+              type="image/jpg"
+              srcset="../images/images/default/sidebar-650.jpg">
+              <img src="../images/images/default/aside-img.jpg" alt="">
+            </picture>
           </div>
           <img class="aside-head__vector" src="../images/logo/aside-vector.svg" alt="">
           <a href="#" class="aside-head__logo">

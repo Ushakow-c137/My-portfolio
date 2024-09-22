@@ -169,7 +169,7 @@ body {
 .header {
   width: calc(100vw - 33rem);
   background-color: var(--indexBlue);
-  z-index: 99;
+  z-index: 90;
   position: fixed;
   right: 0;
 }
@@ -192,6 +192,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 5rem;
+  z-index: 50;
 }
 .header__switch {
   position: relative;
@@ -406,6 +407,30 @@ body {
             transform: translateY(-50%);
   }
 }
+@media (max-width: 650px) {
+  .wrapper._active .nav {
+    background-color: rgb(14, 14, 14);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 5rem;
+    width: 100vw;
+    padding-bottom: 10rem;
+    margin-top: 25rem;
+    -webkit-transform: translateX(-1rem);
+        -ms-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+    z-index: 99;
+  }
+  .wrapper._active .nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 10rem;
+  }
+}
 .aside {
   width: var(--sidebarWidth);
   min-height: 100vh;
@@ -543,6 +568,49 @@ body {
 @media (max-width: 1300px) {
   .aside {
     display: none;
+  }
+}
+@media (max-width: 650px) {
+  .wrapper._active .aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    z-index: 88;
+  }
+  .wrapper._active .aside .aside-head {
+    width: 100%;
+  }
+  .wrapper._active .aside .aside-head__bg-img {
+    margin-top: 5rem;
+    z-index: 100;
+  }
+  .wrapper._active .aside .aside-head__bg-img img {
+    width: 100%;
+  }
+  .wrapper._active .aside .aside-head__vector {
+    display: none;
+  }
+  .wrapper._active .aside .aside-head__logo {
+    position: absolute;
+    margin-top: 22rem;
+    left: 7.5rem;
+    z-index: 100;
+  }
+  .wrapper._active .aside .aside-head__title {
+    font-size: 24px;
+    top: 29rem;
+    left: 13rem;
+    background-color: transparent;
+  }
+  .wrapper._active .aside .aside-head__subtitle {
+    font-size: 20px;
+    top: 34rem;
+    left: 14.85rem;
+    background-color: transparent;
+  }
+  .wrapper._active .aside__text {
+    margin-top: 45rem;
   }
 }
 .main {
