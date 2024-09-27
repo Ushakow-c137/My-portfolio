@@ -101,3 +101,12 @@ burger.addEventListener('click', function () {
   burger.classList.toggle('_active');
   wrapper.classList.toggle('_active');
 });
+
+
+// ------------- вылетающее Window -------------------
+
+const windowCall = document.querySelector('#has-window');
+const windowEL = document.querySelector('#has-window .window');
+windowCall.addEventListener('click', () => {
+  windowEL.classList.toggle("_active")
+})

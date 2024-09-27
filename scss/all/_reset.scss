@@ -80,6 +80,12 @@ body {
 .wrapper {
 	min-height: 100%;
 	overflow: hidden;
+  transition: all .5s linear;
+}
+
+
+.wrapper._active {
+  transition: all .2s linear;
 }
 
 

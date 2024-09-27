@@ -70,10 +70,10 @@
     display: flex;
     align-items: center;
     position: relative;
-    justify-content: center;
 
     @media (max-width: 650px) {
       display: grid;
+      justify-content: center; //! 
 
       //! ширина РЯДОВ
       grid-template-rows: repeat(2, auto);

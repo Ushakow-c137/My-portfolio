@@ -1,11 +1,15 @@
 .header {
 
   width: calc(100vw - 33rem);
-  // margin-left: auto;
   background-color: var(--indexBlue);
-  z-index: 90;
+  z-index: 20;
+
   position: fixed;
   right: 0;
+
+  @media (max-width: 650px) {
+
+  }
 
   @media (max-width: 1300px) {
     width: 100%;
@@ -19,7 +23,7 @@
     align-items: center;
     justify-content: space-between;
     min-height: 5rem;
-    z-index: 50;
+
   }
 
   &__switch {
@@ -62,6 +66,7 @@
   opacity: 0;
   visibility: hidden;
   padding: 2rem 2.6rem 1.8rem 2.6rem;
+  min-width: 22rem;
   border-radius: 0px 0px 1.2rem 1.2rem;
   background-color: var(--lightBlue);
   transition: all .2s linear;
@@ -80,6 +85,8 @@
 
 }
 
+// ! ---------------------------
+
 .nav {
   
 
@@ -89,6 +96,7 @@
   }
 
   &__item {
+    position: relative;
     transition: .2s color linear;
     & .subnav__link {
       transition: color .2s linear;
@@ -157,6 +165,87 @@
 
   }
 }
+
+// ---------------- window ------------------------
+
+
+.window {
+
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 6.4rem;
+  left: 0;
+  min-width: 59.4rem;
+  padding: 3.2rem;
+  background-color: var(--lightBlue);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 1460px) {
+    min-width: 34rem;
+    max-width: 36rem;
+  }
+
+
+  &__back {
+    position: absolute;
+    top: 1.3rem;
+    right: 2rem;
+    width: 2.7rem;
+    height: 2.7rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media (max-width: 1460px) {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+  }
+
+
+
+  &__title {
+    color: var(--white);
+    font-size: 3.2rem;
+    line-height: 1.2;
+    font-family: "Roboto";
+    margin-bottom: 3.6rem;
+  }
+
+
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    & li {
+      :hover {
+        transition: all .3s linear;
+        transform: rotate(360deg);
+      }
+    }
+
+    & li:not(:last-of-type) {
+      margin-right: 4.8rem;
+    }
+  }
+
+
+
+  &__link {
+  }
+}
+
+.window._active {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 
 
@@ -257,30 +346,78 @@
 
 @media (max-width: 650px) {
   .wrapper._active{
+    .header {
+      height: auto;
+      // transition: all .5s linear;
+      position: relative;
+      z-index: 50;
+
+      &__content {
+        position: relative;
+        height: auto;
+      }
+    }
+    // position: relative;
     .nav {
-      background-color: rgba(14, 14, 14, 1);
-      display: flex; 
+      display: flex;
       position: absolute;
-      top: 5rem;
-      width: calc(100vw);
-      padding-bottom: 10rem;
-      margin-top: 25rem;
+      background-color: #4a4a4a;
+      width: 100%;
+      margin-top: 105rem;
       transform: translateX(-1rem);
-      z-index: 99;
-  
+      height: auto;
+
+      
       &__list {
         flex-direction: column;
-        margin-top: 10rem;
+        margin-left: 1rem;
+        height: auto;
+
+        & li:not(:last-of-type) {
+          // margin-bottom: 3.2rem; // 2.5
+        }
       }
   
       &__item {
-  
+        padding: 0;
+        width: auto;
+        &:not(:first-of-type) {
+          margin-top: 3.2rem;
+        }
+        
       }
   
       &__link {
-  
+        padding-right: 1rem;
+        padding-left: 1rem;
+        font-size: 1.8rem;
+        font-family: "Roboto";
+        padding: 0;
+        height: auto;
+        display: inline;
+
+
+
+        &:hover {
+          background-color: transparent;
+          color: var(--lightBlue);
+
+        }
+        transition: none;
+        &:active {
+          
+        }
       }
     }
+
+
+    .subnav {
+      // position: relative;
+      padding: 0;
+    }
+
+
+
     
   }
 }

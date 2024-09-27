@@ -16,7 +16,7 @@
         <nav class="header__nav nav">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="#">Главная</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Обо мне</a></li>
+            <li class="nav__item"><a class="nav__link" href="./for-me.html">Обо мне</a></li>
             <li class="nav__item">
               <a class="nav__link has-subnav" href="#">Мои работы</a>
               <ul class="subnav">
@@ -27,7 +27,18 @@
                 <li><a href="#" class="subnav__link">Billy Harrington</a></li>
               </ul>
             </li>
-            <li class="nav__item"><a class="nav__link" href="#">Написать мне</a></li>
+            <li class="nav__item" id="has-window">
+              <a class="nav__link" href="#">Написать мне</a>
+              <section class="nav__window window">
+                <img src="../images/logo/back.svg" alt="" class="window__back">
+                <h2 class="window__title">Связаться со мной</h2>
+                <ul class="window__list">
+                  <li class="window__link"><a href="#"><img src="../images/logo/vk.svg" title="Написать в ВК"></a></li>
+                  <li class="window__link"><a href="#"><img src="../images/logo/tg.svg" title="Написать в Telegram"></a></li>
+                  <li class="window__link"><a href="#"><img src="../images/logo/kwork.svg" title="На профиль Kwork"></a></li>
+                </ul>
+              </section>
+            </li>
           </ul>
         </nav>
 
@@ -45,8 +56,10 @@
     <aside class="aside">
       <div class="aside__content">
 
-        <section class="aside__head aside-head">
-          <div class="aside-head__bg-img">
+        <div class="aside__head head">
+          <img class="head__vector" src="../images/logo/aside-vector.svg" alt="">
+
+          <div class="head__bg">
             <picture>
               <source
               media="(max-width: 650px)"
@@ -59,13 +72,19 @@
               <img src="../images/images/default/aside-img.jpg" alt="">
             </picture>
           </div>
-          <img class="aside-head__vector" src="../images/logo/aside-vector.svg" alt="">
-          <a href="#" class="aside-head__logo">
-            <img src="../images/images/default/aside-logo.jpg" alt="logo">
-          </a>
-          <p class="aside-head__title">Максим Ушаков</p>
-          <p class="aside-head__subtitle">HTML - верстальщик</p>
-        </section>
+
+          <div class="head__logo logo">
+            <div class="logo__img">
+              <img src="../images/images/default/aside-logo.jpg" alt="">
+            </div>
+            <p class="logo__title">
+              Максим Ушаков
+            </p>
+            <p class="logo__subtitle">
+              HTML - верстальщик
+            </p>
+          </div>
+        </div>
 
         <p class="aside__text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vel quo 
