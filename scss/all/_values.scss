@@ -15,6 +15,21 @@
 
   --backgroundColor: #D4DCF8;
   --sidebarColor: #1648a3;
+
+  .logo__img {
+    border: 1px solid #000;
+  }
+
+  .wrapper._active .header .nav__list::before {
+    height: 1px;
+    background-color: #000;
+  }
+
+  .wrapper._active .header .nav__link:hover {
+    color: #000;
+  }
+  
+
   .header__switch {
     justify-content: flex-end;
     div {
@@ -39,6 +54,16 @@
         }
       }
     }
+    
+    .header__switch div::after {
+      display: none;
+    }
+
+    .header__switch div::before {
+      display: none;
+    }
+
+
   }
   
 

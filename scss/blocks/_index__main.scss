@@ -29,3 +29,13 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 650px) {
+
+  .wrapper._active{
+    .main {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}

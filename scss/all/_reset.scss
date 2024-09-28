@@ -65,6 +65,10 @@ body {
 	color: black;
 	background-color: var(--backgroundColor);
   font-family: "Montserrat";
+
+  .wrapper._active {
+    background-color: var(--sidebarColor);
+  }
 }
 
 body * {
