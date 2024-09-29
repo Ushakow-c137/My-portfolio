@@ -29,6 +29,7 @@ const slider = new Swiper(".slider", {
   pagination: { 
     el: '.swiper-pagination', 
     clickable: true, 
+    // dynamicBullets: true,
   }, 
 
   navigation: { 
@@ -43,20 +44,26 @@ const slider = new Swiper(".slider", {
   mousewheel: {}, 
 
   slidesPerView: 2, 
+  // slidesPerGroup: 2,
 
   breakpoints: { 
     650: { 
       spaceBetween: clientWidth(), 
       slidesPerView: slidesPerView(),
+      
     },
-    320: {
-      spaceBetween: 0,
-      slidesPerGroup: 1,
-    } 
+    // 320: {
+    //   spaceBetween: 0,
+    //   slidesPerGroup: 1,
+    // } 
   }, 
 
   autoHeight: false, 
   // slidesPerColumn: 2, 
+});
+
+window.addEventListener('resize', () => {
+  swiper.update();
 });
 
 
@@ -98,6 +105,7 @@ if (styleMode === 'dark') {
 const burger = document.querySelector('.header__burger');
 const wrapper = document.querySelector('.wrapper');
 burger.addEventListener('click', function () {
+  console.log('ass')
   burger.classList.toggle('_active');
   wrapper.classList.toggle('_active');
 });
