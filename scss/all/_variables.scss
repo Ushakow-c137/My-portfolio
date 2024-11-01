@@ -1,0 +1,54 @@
+:root {
+  --lightBlue: #5685EA;
+  --background: #26282e;
+  --darckenBlue: #29398B;
+  --yellow: #FECD09;
+  --white: #FFFFFF;
+  --black: #000;
+  --silver: rgb(27, 27, 27);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter/);
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat/);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto/);
+}
+@font-face {
+  font-family: "Arial";
+  src: url(../fonts/Arial.ttf);
+}
+
+.light {
+  .more-info {
+    background-color: rgba(255, 255, 255, 0.7);
+
+    h3 {
+      color: #000;
+    }
+  
+    p {
+      color: #000;
+      opacity: 1;
+    }
+    a {
+      color: var(--black);
+      border: 2px solid var(--lightBlue);
+      &:hover {
+        border: 2px solid var(--yellow);
+      }
+    }
+  }
+}
+
+.image {
+  overflow: hidden;
+  background: url(../images/gif.gif) center/50px no-repeat;
+  z-index: 300;
+}
