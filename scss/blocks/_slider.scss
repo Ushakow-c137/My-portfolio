@@ -227,14 +227,19 @@
       width: 6rem;
       height: 6rem;
       border-radius: 50%;
-      background-color: var(--backgroundBlue);
+      // background-color: var(--lightBlue);
       // position: relative;
+      transition: border .5s linear;
+      &:hover {
+        transition: border .5s linear;
+        border: 2px solid var(--lightBlue);
+      }
       @media (max-width: 700px) {
         display: none;
       }
       &::after {
         position: absolute;
-        content: url(../images/logo/row.svg);
+        content: url(../images/logo/row-white.svg);
         height: 100%;
         display: flex;
         align-items: center;
@@ -270,7 +275,7 @@
 .swiper-pagination-fraction {
   color: var(--yellow);
   font-size: 2rem;
-  transform: translateY(-2rem);
+  transform: translateY(-2.5rem);
   @media (max-width: 700px) {
     color: var(--black);
   }

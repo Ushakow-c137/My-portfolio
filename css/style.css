@@ -519,7 +519,12 @@ body {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  background-color: var(--backgroundBlue);
+  transition: border 0.5s linear;
+}
+.swiper__button .swiper-button-prev:hover,
+.swiper__button .swiper-button-next:hover {
+  transition: border 0.5s linear;
+  border: 2px solid var(--lightBlue);
 }
 @media (max-width: 700px) {
   .swiper__button .swiper-button-prev,
@@ -530,7 +535,7 @@ body {
 .swiper__button .swiper-button-prev::after,
 .swiper__button .swiper-button-next::after {
   position: absolute;
-  content: url(../images/logo/row.svg);
+  content: url(../images/logo/row-white.svg);
   height: 100%;
   display: flex;
   align-items: center;
@@ -562,7 +567,7 @@ body {
 .swiper-pagination-fraction {
   color: var(--yellow);
   font-size: 2rem;
-  transform: translateY(-2rem);
+  transform: translateY(-2.5rem);
 }
 @media (max-width: 700px) {
   .swiper-pagination-fraction {
